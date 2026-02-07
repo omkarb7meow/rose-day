@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Rose Day ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+      overflow: hidden;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #b30047;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5rem;
+    }
+
+    .rose {
+      position: absolute;
+      top: -50px;
+      font-size: 30px;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🌹 <h1>🌹 Happy Rose Day Mahek 🌹</h1>
+ 🌹</h1>
+  <p>These roses are for you until I give them in real ❤️</p>
+
+  <script>
+    function createRose() {
+      const rose = document.createElement("div");
+      rose.className = "rose";
+      rose.innerText = "🌹";
+
+      rose.style.left = Math.random() * window.innerWidth + "px";
+      rose.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+      document.body.appendChild(rose);
+
+      setTimeout(() => {
+        rose.remove();
+      }, 6000);
+    }
+
+    setInterval(createRose, 300);
+  </script>
+
+</body>
+</html>
